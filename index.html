@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emoji Maze Escape 🐱</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <button id="themeToggle" onclick="toggleTheme()">🌗</button>
+  <h1>🐱 Emoji Maze Escape</h1>
+  <p id="timer">Time: 0s</p>
+  <p id="best">Best: --</p>
+  <form id="scoreForm">
+    <input type="text" id="playerName" placeholder="Enter your name" required />
+    <button type="submit">Submit Score</button>
+  </form>
+  <button id="resetScoreboard" onclick="resetScoreboard()">🗑️ Reset Scoreboard</button>
+  <div id="scoreboard">
+    <h3>🏆 Scoreboard</h3>
+    <ul id="scoreList"></ul>
+  </div>
+  <div class="maze" id="maze"></div>
+  <p id="status">Use arrow keys or buttons to move 🕹️</p>
+
+  <div class="controls">
+    <button onclick="handleMove(0,-1)">⬆️</button>
+    <div>
+      <button onclick="handleMove(-1,0)">⬅️</button>
+      <button onclick="handleMove(1,0)">➡️</button>
+    </div>
+    <button onclick="handleMove(0,1)">⬇️</button>
+  </div>
+
+  <button id="restartBtn" onclick="restartGame()">🔁 Restart</button>
+
+  <audio id="moveSound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+  <audio id="winSound" src="https://www.fesliyanstudios.com/play-mp3/6676" preload="auto"></audio>
+  <audio id="cheerSound" src="https://www.fesliyanstudios.com/play-mp3/6768" preload="auto"></audio>
+
+  <div id="winPop" class="hidden">🎉🐱🎈 YOU WIN! 🎈🐱🎉</div>
+  <script src="script.js"></script>
+</body>
+</html>
